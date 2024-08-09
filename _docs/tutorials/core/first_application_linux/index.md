@@ -69,6 +69,8 @@ At this point, you have both the client and the agent correctly installed in you
 
 To give micro-ROS access to the ROS 2 dataspace, run the agent:
 
+OBS: I'm facing issues following this guide. Notwithstanding code problems/erros, I simply can't find the topic/node created with micro_ros_agent. It seems to me that is a problem related to ROS_DOMAIN_ID, once the port used is 8888 and the default ROS2 instalation was made in another pack of available ports with ROS_DOMAIN_ID=0. I tested "ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888 ROS_DOMAIN_ID=0" without success. I also found other people with the same problem, so I was wondering if this tutorial really fits with the ending of the ROS/ROS2 instalation and toturials guide made by you. Maybe something should be changed to reach coherence.
+
 ```bash
 # Run a micro-ROS agent
 ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888
